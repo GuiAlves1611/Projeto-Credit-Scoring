@@ -712,7 +712,13 @@ elif page == "Simulador":
 
         st.success("✅ **Simulação Concluída!**")
         with st.container(border=True):
-            st.markdown("### 📊 Relatório de Análise de Crédito")
+
+            col_titulo, col_id = st.columns([3, 1])
+
+            with col_titulo:
+                st.markdown("### 📊 Relatório de Análise de Crédito")
+            with col_id:
+                st.markdown(f"**ID** `{novo_id}`")
 
             col_decisao1, col_decisao2, col_decisao3, = st.columns([2, 1, 1])
 
